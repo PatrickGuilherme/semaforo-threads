@@ -35,7 +35,7 @@ void insereArquivo() {
 			novo = (t_fila *) malloc(sizeof(t_fila));
 			novo->prox = NULL;
 	
-			geraNomeArquivo(novo->Arquivo);
+			novo->Arquivo = geraNomeArquivo();
 			aux = raiz;
 			if (raiz == NULL)
 	        {
@@ -50,7 +50,7 @@ void insereArquivo() {
 			}
 			pos++;//incrementa posicoes ocupadas
 	
-	        printf("\n[Informacao] Elemento adicionado com valor = %s\n", novo->Arquivo);	
+	        printf("\n[Informacao] Elemento adicionado com valor = %d\n", novo->Arquivo);	
 		}else{
 			printf("\n|==================== REMOVER ====================|");
 						
@@ -63,7 +63,7 @@ void insereArquivo() {
 				}else{
 					raiz = NULL;
 				}
-				printf("\n[Informacao] Elemento removido com valor = %s\n", aux->Arquivo);
+				printf("\n[Informacao] Elemento removido com valor = %d\n", aux->Arquivo);
 			}else{
 				printf("\n[Mensagem] Sem valores a remover\n");
 			}
@@ -85,7 +85,7 @@ void imprimeArquivo() {
 		aux = raiz;
 		if(aux != NULL){
 			while(aux != NULL){
-				printf("\n[Informacao] Item com valor = %s \n", aux->Arquivo);
+				printf("\n[Informacao] Item com valor = %d \n", aux->Arquivo);
 				aux = aux->prox;		
 			}
 		}else{
@@ -100,15 +100,9 @@ void imprimeArquivo() {
 }
 
 //Gerar nome do arquivo
-void geraNomeArquivo(char *string) {
-    char *tmp;
-	char seq[10];
-
-    tmp = string;
-
-	strcpy(tmp, "Arquivo ");
-	itoa(sequenciaArquivo++, seq, 10);
-	strcat(tmp, seq);
+int geraNomeArquivo() {
+	sequenciaArquivo++;	
+	return 	sequenciaArquivo;
 }
 
 //

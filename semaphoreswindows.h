@@ -9,7 +9,7 @@
 #define POSICOES 100
 
 typedef struct {
-	char Arquivo[100];
+	int Arquivo;
 	void * prox;
 } t_fila ;
 
@@ -17,7 +17,7 @@ typedef struct {
 // Prototipos
 void insereArquivo();
 void imprimeArquivo();
-void geraNomeArquivo(char *);
+int geraNomeArquivo();
 
 /**
 Operações sobre semáforos contadores
