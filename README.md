@@ -37,7 +37,7 @@ A garantia da consistência da lista (exclusão mútua) deverá ser feita com o 
 <!--Conjunto de prints da aplicação-->
 <h1 align="center">
     <img title="Imagem 1" src="demonstracao/1.png"/>
-    <img title="Imagem 2" src="demonstracao/2.png/>
+    <img title="Imagem 2" src="demonstracao/2.png"/>
 </h1>
 
 
